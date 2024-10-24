@@ -1,3 +1,5 @@
+// Створіть новий тип даних, який підходить для цих двох об'єктів.
+
 // const page1 = {
 //   title: "The awesome page",
 //   likes: 100,
@@ -16,7 +18,18 @@
 //   status: "close",
 // };
 
-const page1 = {
+interface Page {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: string;
+  details?: {
+    createAt: Date;
+    updateAt: Date;
+  };
+}
+
+const page1: Page = {
   title: "The awesome page",
   likes: 100,
   accounts: ["Max", "Anton", "Nikita"],
@@ -27,7 +40,7 @@ const page1 = {
   },
 };
 
-const page2 = {
+const page2: Page = {
   title: "Python or Js",
   likes: 5,
   accounts: ["Alex"],

@@ -1,3 +1,6 @@
+// Типізуйте функцію isWeekend яка приймає день тижня з enum DayOfWeek і повертає boolean значення,
+// що вказує, чи це день робочий чи вихідний.
+
 // enum DayOfWeek {
 //     Monday,
 //     Tuesday,
@@ -21,4 +24,6 @@ enum DayOfWeek {
   Sunday,
 }
 
-const isWeekend = (day) => {};
+const isWeekend = (day: DayOfWeek): boolean => {
+  return day === DayOfWeek.Saturday || day === DayOfWeek.Sunday;
+};
